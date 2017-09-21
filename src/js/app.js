@@ -1,21 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Chat from './chat.js';
+import Header from './header.js';
+import Footer from './footer.js';
 
 class App extends React.Component {
     render() {
         return(<div>
             <div className="app">
-                <header>This is header</header>
+                <Header />
                 <content>
                     <Chat />
                 </content>
-                <footer>This is footer</footer>
+                <Footer />        
             </div>
         </div>);
     }
 }
-;
 
+//can export more than one
 module.exports = App;
 

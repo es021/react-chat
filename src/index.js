@@ -15,6 +15,7 @@ import App from './js/app.js';
 
 // Load CSS
 require("./css/app.css");
+require("./lib/font-awesome-4.7.0/css/font-awesome.css");
 
 const title = 'Chat Reader';
 

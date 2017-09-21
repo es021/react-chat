@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start-react": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js",
-    "start-server" : "node ./server/server.js",
+    "start-server": "node ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "webpack -p --progress"
+    "build": "webpack -p --progress"
   },
   "author": "",
   "license": "ISC",
@@ -33,7 +33,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
     "react-hot-loader": "^1.3.1",
-    "style-loader": "^0.18.2"
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9"
   }
 }
