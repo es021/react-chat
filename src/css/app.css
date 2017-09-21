@@ -53,17 +53,22 @@ content{
 
 footer{
     grid-area:"footer";
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .chat{
+    text-align: left;
     font-size:13px;
     padding: 5px 5px;
     margin: 10px;
-    height: 300px;
+    height: 65vh;
     overflow-y: scroll;
 
     background: rgba(0,0,0,0.2);
-    height: 90%;
+    /*    height: 90%;*/
     width: 90%;
     max-width: 400px;
 }
