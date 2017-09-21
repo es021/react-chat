@@ -1,5 +1,13 @@
 html, body{
     font-family: "Arial";
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
 }
 
 ::-webkit-scrollbar {
@@ -17,7 +25,34 @@ html, body{
 
 /* Chat *******************************************/
 
-#app{
+.app{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(-30deg, #1A54A2, #139B53);
+    display: grid;
+
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-area: 
+        "header"
+        "content"
+        "footer";
+
+    text-align: center;
+}
+
+header{
+    grid-area:"header";
+}
+
+content{
+    grid-area:"content";
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    grid-area:"footer";
 }
 
 .chat{
@@ -26,10 +61,11 @@ html, body{
     margin: 10px;
     height: 300px;
     overflow-y: scroll;
-    border: darkgrey 1px solid;
-    background: whitesmoke;
-    border-radius: 5px;
-    max-width: 300px;
+
+    background: rgba(0,0,0,0.2);
+    height: 90%;
+    width: 90%;
+    max-width: 400px;
 }
 
 .chat .chat_item{
@@ -84,9 +120,9 @@ html, body{
     margin: 10px 0;
 }
 .chat .control a.small_link{
-    color : #008975;
-    opacity: 0.8;
+    color: white;
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .chat .control a.small_link:hover{
@@ -99,6 +135,7 @@ html, body{
 
 .chat .loading{
     text-align: center;
-    color : #008975;
+    color:white;
     opacity: 0.8;
+
 }
