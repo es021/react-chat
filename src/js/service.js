@@ -31,7 +31,8 @@ Service.prototype.ajax = function (type, action, data, success, error) {
 
 /**** CHAT SERVICE ********************************************/
 var ChatService = function () {
-    this.service = new Service("http://localhost:3000/v1/chat/");
+    //this.service = new Service("http://localhost:3000/v1/chat/");
+    this.service = new Service("http://138.197.112.227/chatapi/v1/chat/");
 };
 
 ChatService.prototype.getByPage = function (page, success, error) {

@@ -2,7 +2,7 @@ var mysql = require('mysql');
 
 var DB = function () {
     this.con = null;
-    this.init("localhost", "root", "", "ip");
+    this.init("localhost", "root", "gundamseed21", "ip");
 };
 
 DB.prototype.init = function (host, user, password, database) {
@@ -13,12 +13,12 @@ DB.prototype.init = function (host, user, password, database) {
         user: user,
         password: password,
         database: database,
-        charset : 'utf8mb4'
+        charset: 'utf8mb4'
     });
-
     this.con.connect(function (err) {
+
         if (err) {
-            throw err;
+            console.log(err);//throw err;
         }
 
         console.log("DB - Connected");
@@ -28,7 +28,7 @@ DB.prototype.init = function (host, user, password, database) {
 DB.prototype.query = function (sql, response, dbHandler) {
     this.con.query(sql, function (err, result) {
         if (err) {
-            throw err;
+            console.log(err);//throw err;
         } else {
 
             if (response !== undefined && dbHandler !== undefined) {
