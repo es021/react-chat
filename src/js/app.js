@@ -15,7 +15,7 @@ class App extends React.Component {
             </div>
         </div>);
     }
-}
+};
 
 //can export more than one
 module.exports = App;
