@@ -4,10 +4,19 @@ var app = express();
 var db = require('./model/DB.js');
 var db_chat = require('./model/Chat.js');
 
-const SERVER = "http://138.197.112.227";
+var SERVER = "";
+var APP_NAME = "";
+
+if (process.env.NODE_ENV === "development") {
+    SERVER = "http://localhost";
+    APP_NAME = "";
+} else {
+    SERVER = "http://138.197.112.227";
+    APP_NAME = "/chatapi";
+}
+
 const PORT = "3000";
 const PORT_REACT_APP = "8080";
-const APP_NAME = "/chatapi";
 
 /*** API ********************************************/
 function dbHandler(response, db_result) {

@@ -31,8 +31,17 @@ Service.prototype.ajax = function (type, action, data, success, error) {
 
 /**** CHAT SERVICE ********************************************/
 var ChatService = function () {
-    //this.service = new Service("http://localhost:3000/v1/chat/");
-    this.service = new Service("http://138.197.112.227/chatapi/v1/chat/");
+    
+    var api_url = "";
+    if (process.env.NODE_ENV === "development") {
+        api_url = "http://localhost:3000/v1/chat/";
+    }
+
+    if (process.env.NODE_ENV === "production") {
+        api_url = "http://138.197.112.227/chatapi/v1/chat/";
+    }
+
+    this.service = new Service(api_url);
 };
 
 ChatService.prototype.getByPage = function (page, success, error) {

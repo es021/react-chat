@@ -1,6 +1,11 @@
 const webpack = require('webpack');
 
-const isProd = "true";
+var isProd = false;
+if (process.env.NODE_ENV === "production") {
+    isProd = true;
+}else if (process.env.NODE_ENV === "development") {
+    isProd = false;
+}
 
 var entry;
 if (isProd) {
@@ -18,7 +23,8 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
-                'NODE_ENV': JSON.stringify((isProd) ? 'production' : 'development')
+                // 'NODE_ENV': JSON.stringify((isProd) ? 'production' : 'development')
+                'NODE_ENV': JSON.stringify((process.env.NODE_ENV))
             }
         })
     ],

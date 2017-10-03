@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-console.log(process.env);
 
 /*
  if (process.env.NODE_ENV === 'test') {
