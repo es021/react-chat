@@ -6,9 +6,12 @@ class Header extends React.Component {
     }
 
     render() {
-        return(<header>
-            This Is Header                    
-        </header>);
+        return(
+                <header>
+                    <div className='title'>Our Chat</div>                    
+                    <div className='subtitle'>Recreate From Our Whatsapp Conversation</div>                    
+                </header>
+                );
     }
 }
 

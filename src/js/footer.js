@@ -6,10 +6,20 @@ class Footer extends React.Component {
     }
 
     render() {
-        return(<footer>
-            This is footer                    
-            <i className="fa fa-heart"></i>
-        </footer>);
+
+        var iconStyle = {
+            marginLeft: '4px',
+            color: "red",
+            opacity: "1"
+        };
+
+        return(
+                <footer>
+                    <div className ="text">
+                        Made With <i style={iconStyle} className="fa fa-heart"></i>
+                    </div>
+                </footer>
+                );
     }
 }
 
